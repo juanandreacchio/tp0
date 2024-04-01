@@ -111,7 +111,7 @@ void paquete(int conexion)
 	// Leemos y esta vez agregamos las lineas al paquete
 	while (strcmp(leido,""))
 	{
-		agregar_a_paquete(paquete,leido);
+		agregar_a_paquete(paquete, leido, strlen(leido) + 1);
 		free(leido);
 		leido = readline("> ");
 	}
